@@ -23,6 +23,8 @@ urlpatterns = [
     path('test/',views.test),
     path('login/',views.login),
     path('product_manage/',proviews.product_manage),
-    path('logout/',proviews.logout)
+    path('logout/',proviews.logout),
+    path('apitest_manage/',views.apitest_manage),
+    path('apistep_manage/',views.apistep_manage),
 
 ]
