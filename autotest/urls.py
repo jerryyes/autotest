@@ -30,5 +30,6 @@ urlpatterns = [
     path('apistep_manage/',views.apistep_manage),
     path('bug_manage/',bugviews.bug_manage),
     path('set_manage/',setviews.set_manage),
+    path('set_user/',setviews.set_user),
 
 ]
