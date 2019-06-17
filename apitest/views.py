@@ -5,6 +5,7 @@ from django.contrib import auth
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 import HtmlTestRunner
+import pymysql
 
 
 # Create your views here.
@@ -38,7 +39,7 @@ def test_report(request):
     username = request.session.get('user', '')
     apis_list = Apis.objects.all()
     apis_count = Apis.objects.all().count()  # 统计接口数
-    db = pymysql.connect(user='root', db='autotest', passwd='test123456', host='127.0.0.1')
+    db = pymysql.connect(user='root', db='autotest', passwd='Qw123456', host='127.0.0.1')
     cursor = db.cursor()
     sql1 = 'SELECT count(id) FROM apitest_apis WHERE apitest_apis.apistatus=1'
     aa = cursor.execute(sql1)

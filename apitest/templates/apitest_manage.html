@@ -42,6 +42,12 @@
  <td>{{ apitest.apitester }}</td>
  <td>{{ apitest.apitestresult }}</td>
  <td>{{ apitest.Apistep.apiteststep }}</td>
+ <td>{% if apitest.apitestresult == 1 %}
+<a style='color:green'>{{ apitest.apitestresult }}</a>
+{% else %}
+<a style='color:red'>{{ apitest.apitestresult }}</a>
+{% endif %}
+</td>
  </tr>
  {% endfor %}
  </tbody>
