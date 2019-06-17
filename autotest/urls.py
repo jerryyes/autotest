@@ -19,20 +19,23 @@ from apitest import views
 from product import proviews
 from bug import bugviews
 from set import setviews
-from apptest import views
+from apptest import appviews
+from webtest import webviews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('test/',views.test),
-    path('login/',views.login),
+    path('test/', views.test),
+    path('login/', views.login),
     path('product_manage/',proviews.product_manage),
     path('logout/',proviews.logout),
-    path('apitest_manage/',views.apitest_manage),
-    path('apistep_manage/',views.apistep_manage),
+    path('apitest_manage/', views.apitest_manage),
+    path('apistep_manage/', views.apistep_manage),
     path('bug_manage/',bugviews.bug_manage),
     path('set_manage/',setviews.set_manage),
     path('set_user/',setviews.set_user),
-    path('appcase_manage/',views.appcase_manage),
-    path('appcasestep_manage/',views.appcasestep_manage),
+    path('appcase_manage/', appviews.appcase_manage),
+    path('appcasestep_manage/', appviews.appcasestep_manage),
+    path('webcase_manage/',webviews.webcase_manage),
+    path('webcasestep_manage/',webviews.webcasestep_manage),
 
 ]
