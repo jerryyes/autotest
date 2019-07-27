@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'set',
     'apptest',
     'webtest',
+    'django_crontab',
 ]
 
 MIDDLEWARE = [
@@ -132,7 +133,12 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')    # DASE_DIR为项目的绝对路径(已经获取到了)
 STATIC_URL = '/static/'
 
 TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'apitest/templates'),)
+
+#CRONJOBS LIST
+CRONJOBS = [
+  ('*/1 * * * *', 'apitest.crontest.getSum(4)','>>/tmp/test.log')
+]

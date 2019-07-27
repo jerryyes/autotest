@@ -21,6 +21,7 @@ from bug import bugviews
 from set import setviews
 from apptest import appviews
 from webtest import webviews
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -39,3 +40,5 @@ urlpatterns = [
     path('webcasestep_manage/',webviews.webcasestep_manage),
 
 ]
+
+urlpatterns += static('/static/', document_root=settings.STATIC_ROOT)
