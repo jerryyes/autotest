@@ -8,6 +8,7 @@ def getSum(n):
         rangelist.append(str(i))
     SumExp = '+'.join(rangelist)
     print("%s = %s" %(SumExp,sum))
+    return SumExp,sum
 
 if __name__=='__main__':
     getSum(4)
