@@ -140,5 +140,5 @@ TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'apitest/templates'),)
 
 #CRONJOBS LIST
 CRONJOBS = [
-  ('*/1 * * * *', 'apitest.crontest.getSum(4)','>>/tmp/test.log')
+  ('*/5 * * * *', 'apitest.crontest.getSum(4)','>>/Users/chenzhiyuan/PycharmProjects/autotest/logs/test.log')
 ]

@@ -41,4 +41,4 @@ urlpatterns = [
 
 ]
 
-urlpatterns += static('/static/', document_root=settings.STATIC_ROOT)
+#urlpatterns += static('/static/', document_root=settings.STATIC_ROOT)
