@@ -10,6 +10,9 @@ def getSum(n):
     print("%s = %s" %(SumExp,sum))
     return SumExp,sum
 
-if __name__=='__main__':
+def test():
     getSum(4)
+
+#if __name__=='__main__':
+#    getSum(4)
 
