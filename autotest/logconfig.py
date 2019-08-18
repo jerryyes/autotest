@@ -16,7 +16,7 @@ LOG_CONFIG = {
             'level': 'DEBUG',
             'formatter': 'simple',
             'class': 'logging.handlers.TimedRotatingFileHandler',
-            'filename': 'logs/apitest.log',
+            'filename': '/Users/chenzhiyuan/PycharmProjects/autotest/logs/apitest.log',
             'when': 'midnight',
             'encoding': 'utf-8',
         },
