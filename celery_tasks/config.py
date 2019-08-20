@@ -19,7 +19,7 @@ CELERYBEAT_SCHEDULE = {
     'refresh1': {
         "task": "celery_tasks.apitest.tasks.getSum",
         "schedule": crontab(hour='*/5'),
-        "args": (4,),
+        "args": (4),
     },
 }
 
