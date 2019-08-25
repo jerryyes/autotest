@@ -23,8 +23,6 @@ CELERYBEAT_SCHEDULE = {
     },
 }
 
-#CELERY_IMPORTS = ('celery_tasks.apitest.tasks',)
-
 LOG_CONFIG = {
     'version': 1,
     'disable_existing_loggers': False,
