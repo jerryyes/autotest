@@ -16,12 +16,14 @@ CELERY_TIMEZONE = 'Asia/Shanghai'
 # 这里列出了三个最典型的定时任务，更多用法自行百度crontab语法
 CELERYBEAT_SCHEDULE = {
     # 定时任务一：　每5分钟执行一次任务(getSum)
-    'refresh1': {
+    'getSum': {
         "task": "celery_tasks.apitest.tasks.getSum",
-        "schedule": crontab(hour='*/5'),
-        "args": (4),
+        "schedule": crontab(hour='*/1'),
+        "args": (4,),
     },
 }
+
+#CELERY_IMPORTS = ('celery_tasks.apitest.tasks',)
 
 LOG_CONFIG = {
     'version': 1,

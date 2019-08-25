@@ -1,10 +1,10 @@
 from celery_tasks.main import celery_app
 from celery.utils.log import get_task_logger
 
-logger = get_task_logger('celery')
+logger = get_task_logger('getSum')
 
 # 此定时任务是定时对 1-n 的数列求和
-@celery_app.task()
+@celery_app.task(name='celery_tasks.apitest.tasks.getSum')
 def getSum(n):
     rangelist = []
     sum = 0
