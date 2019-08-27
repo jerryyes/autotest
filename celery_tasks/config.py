@@ -18,7 +18,7 @@ CELERYBEAT_SCHEDULE = {
     # 定时任务一：　每5分钟执行一次任务(getSum)
     'getSum': {
         "task": "celery_tasks.apitest.tasks.getSum",
-        "schedule": crontab(hour='*/10'),
+        "schedule": crontab(hour='*/5'),
         "args": (4,),
     },
 }
